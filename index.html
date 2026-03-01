@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hoda Nasser | Portfolio</title>
+  <meta name="description" content="Portfolio — Hoda Nasser | Full-Stack Web Developer (.NET)" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- NAV -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <span class="dot"></span>
+        <span>Hoda Nasser</span>
+      </a>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu">☰</button>
+
+      <nav class="menu" id="menu">
+        <a href="#about">عنّي</a>
+        <a href="#skills">المهارات</a>
+        <a href="#projects">المشاريع</a>
+        <a href="#services">الخدمات</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+
+      <div class="navActions">
+        <button class="ghost" id="themeBtn" type="button">🌙</button>
+        <a class="btn" href="#contact">اشتغل معايا</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top" class="hero">
+    <div class="container heroGrid">
+      <div>
+        <p class="badge">Full-Stack Web Developer (.NET)</p>
+        <h1>
+          أنا <span class="accent">هدى ناصر</span> — ببني مواقع
+          <span class="accent">سريعة</span> و <span class="accent">احترافية</span>
+          تساعدك تجيب عملاء وتعرض شغلك بأفضل شكل.
+        </h1>
+        <p class="sub">
+          Software Engineering Student — Helwan University.
+          مهتمة بـ .NET, REST APIs, SQL، وواجهة أمامية نظيفة وResponsive.
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn" href="#projects">شوفي شغلي</a>
+          <a class="ghost" href="#contact">ابعتلي رسالة</a>
+        </div>
+
+        <div class="linksRow">
+          <a class="link" id="githubLink" href="https://github.com/USERNAME" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="link" id="linkedinLink" href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="link" id="cvLink" href="assets/Hoda-Nasser-CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
+        </div>
+      </div>
+
+      <aside class="card">
+        <div class="profile">
+          <div class="avatar" aria-hidden="true">HN</div>
+          <div>
+            <h3>Hoda Nasser</h3>
+            <p class="muted">Full-Stack .NET | Frontend</p>
+          </div>
+        </div>
+
+        <div class="miniGrid">
+          <div class="mini">
+            <p class="miniLabel">المكان</p>
+            <p class="miniValue">Egypt</p>
+          </div>
+          <div class="mini">
+            <p class="miniLabel">متاحة لـ</p>
+            <p class="miniValue">Freelance</p>
+          </div>
+          <div class="mini">
+            <p class="miniLabel">تسليم</p>
+            <p class="miniValue">سريع</p>
+          </div>
+          <div class="mini">
+            <p class="miniLabel">تركيز</p>
+            <p class="miniValue">Clean UI</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <a class="btn wide" id="whatsBtn" href="https://wa.me/201000000000" target="_blank" rel="noreferrer">
+          تواصل واتساب
+        </a>
+        <p class="hint">عدّلي رقم الواتساب + روابطك فوق 👆</p>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="sectionHead">
+        <h2>عنّي</h2>
+        <p class="muted">تعريف سريع + اللي بميّز شغلي.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="panel">
+          <h3>مين هدى؟</h3>
+          <p>
+            مطوّرة ويب Full-Stack بتبني مواقع Landing Pages وPortfolio وWeb Apps
+            بكود نظيف، Responsive، ومهيأ لعرض البزنس بشكل احترافي.
+          </p>
+          <ul class="list">
+            <li>اهتمام كبير بالتفاصيل وتجربة المستخدم</li>
+            <li>تنظيم وتسليم واضحين (مراحل + مراجعات)</li>
+            <li>تهيئة SEO أساسية + سرعة تحميل</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Education</h3>
+          <p class="muted">Software Engineering — Faculty of Computers & AI, Helwan University</p>
+          <div class="chips">
+            <span class="chip">.NET</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">SQL Server</span>
+            <span class="chip">HTML/CSS/JS</span>
+            <span class="chip">Git/GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <div class="sectionHead">
+        <h2>المهارات</h2>
+        <p class="muted">أدوات وتقنيات بستخدمها في المشاريع.</p>
+      </div>
+
+      <div class="cards3">
+        <div class="panel">
+          <h3>Frontend</h3>
+          <ul class="list">
+            <li>HTML5 / CSS3 / JavaScript</li>
+            <li>Responsive Design</li>
+            <li>UI Components</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Backend</h3>
+          <ul class="list">
+            <li>ASP.NET Core (أساسي/تطوير)</li>
+            <li>REST APIs</li>
+            <li>Authentication (Basics)</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Database & Tools</h3>
+          <ul class="list">
+            <li>SQL Server / MySQL</li>
+            <li>Git & GitHub</li>
+            <li>Deployment (GitHub Pages)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="sectionHead row">
+        <div>
+          <h2>المشاريع</h2>
+          <p class="muted">اختاري أفضل 3–6 مشاريع وحطي لينكاتها.</p>
+        </div>
+        <a class="ghost" href="https://github.com/USERNAME" target="_blank" rel="noreferrer">كل المشاريع →</a>
+      </div>
+
+      <div class="projectGrid">
+        <!-- Project 1 -->
+        <article class="project">
+          <div class="projectTop">
+            <h3>Portfolio Website</h3>
+            <p class="muted">HTML • CSS • JS</p>
+          </div>
+          <p class="projectDesc">
+            موقع بورتفوليو سريع وResponsive لعرض المهارات والمشاريع مع CTA واضح.
+          </p>
+          <div class="projectLinks">
+            <a class="link" href="https://github.com/USERNAME/portfolio" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project">
+          <div class="projectTop">
+            <h3>Landing Page</h3>
+            <p class="muted">UI • SEO • Performance</p>
+          </div>
+          <p class="projectDesc">
+            صفحة هبوط لبيزنس بخطوات تحويل (Conversion) واضحة + نموذج تواصل.
+          </p>
+          <div class="projectLinks">
+            <a class="link" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project">
+          <div class="projectTop">
+            <h3>CRUD Web App</h3>
+            <p class="muted">.NET • SQL</p>
+          </div>
+          <p class="projectDesc">
+            تطبيق بسيط لإدارة بيانات (إضافة/تعديل/حذف/عرض) مع قاعدة بيانات.
+          </p>
+          <div class="projectLinks">
+            <a class="link" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="link" href="#" target="_blank" rel="noreferrer">Demo</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section alt">
+    <div class="container">
+      <div class="sectionHead">
+        <h2>الخدمات</h2>
+        <p class="muted">إيه اللي أقدر أنفذه ليك؟</p>
+      </div>
+
+      <div class="cards3">
+        <div class="panel">
+          <h3>Portfolio / CV Website</h3>
+          <p class="muted">موقع يعرضك بشكل احترافي ويزود فرصك.</p>
+        </div>
+        <div class="panel">
+          <h3>Landing Page</h3>
+          <p class="muted">صفحة مبيعات/خدمة بهدف جمع Leads.</p>
+        </div>
+        <div class="panel">
+          <h3>Front-end UI</h3>
+          <p class="muted">تحويل تصميم لموقع Responsive بكود نظيف.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="sectionHead">
+        <h2>تواصل</h2>
+        <p class="muted">قولي محتاجة إيه — وهنرد بسرعة.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="panel">
+          <h3>بيانات التواصل</h3>
+          <p class="muted">عدّلي الإيميل والواتساب من ملف script.js</p>
+
+          <div class="contactList">
+            <a class="contactItem" id="emailItem" href="mailto:yourmail@example.com">
+              ✉️ <span>yourmail@example.com</span>
+            </a>
+            <a class="contactItem" id="whatsItem" href="https://wa.me/201000000000" target="_blank" rel="noreferrer">
+              💬 <span>WhatsApp</span>
+            </a>
+            <a class="contactItem" id="linkedItem" href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noreferrer">
+              🔗 <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="panel form" id="contactForm">
+          <h3>ابعت رسالة</h3>
+
+          <label>الاسم
+            <input required name="name" placeholder="اسمك" />
+          </label>
+
+          <label>الإيميل
+            <input required name="email" type="email" placeholder="name@email.com" />
+          </label>
+
+          <label>الرسالة
+            <textarea required name="message" rows="5" placeholder="اكتبي تفاصيل طلبك..."></textarea>
+          </label>
+
+          <button class="btn" type="submit">إرسال</button>
+          <p class="hint">الإرسال بيشتغل عبر mailto (هيفتح برنامج الإيميل عندك).</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footerRow">
+      <p>© <span id="year"></span> Hoda Nasser. All rights reserved.</p>
+      <a class="link" href="#top">فوق ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
