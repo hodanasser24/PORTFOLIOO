@@ -1,63 +1,96 @@
 // ====== YOUR INFO ======
 const YOUR = {
-  email: "yourmail@example.com", // غيري الإيميل هنا
-  whatsapp: "201033777336", // رقمك بصيغة دولية بدون +
+  email: "hoda.nasser2006@gmail.com",
+  whatsapp: "201033777336",
   github: "https://github.com/hodanasser24",
   linkedin: "https://www.linkedin.com/in/hoda-nasser/"
 };
 // ========================
 
+// shortcut function
 const $ = (id) => document.getElementById(id);
 
+// set footer year
 const yearEl = $("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
-// set social links
+// ===== SOCIAL LINKS =====
 $("githubLink").href = YOUR.github;
 $("linkedinLink").href = YOUR.linkedin;
 
-$("emailItem").href = `mailto:${YOUR.email}`;
-$("emailItem").querySelector("span").textContent = YOUR.email;
+// ===== EMAIL =====
+const emailItem = $("emailItem");
+emailItem.href = `mailto:${YOUR.email}`;
+emailItem.querySelector("span").textContent = `Email: ${YOUR.email}`;
 
+// ===== WHATSAPP =====
 const wa = `https://wa.me/${YOUR.whatsapp}`;
 $("whatsBtn").href = wa;
 $("whatsItem").href = wa;
 
+// ===== LINKEDIN =====
 $("linkedItem").href = YOUR.linkedin;
 
-// mobile menu
+// ===== MOBILE MENU =====
 const menuBtn = $("menuBtn");
 const menu = $("menu");
-menuBtn?.addEventListener("click", () => menu.classList.toggle("show"));
 
-document.querySelectorAll("#menu a").forEach(a=>{
-  a.addEventListener("click", ()=> menu.classList.remove("show"));
+menuBtn?.addEventListener("click", () => {
+  menu.classList.toggle("show");
 });
 
-// theme toggle
-const themeBtn = $("themeBtn");
-const saved = localStorage.getItem("theme");
-if (saved === "light") document.body.classList.add("light");
-themeBtn.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
+document.querySelectorAll("#menu a").forEach((a) => {
+  a.addEventListener("click", () => {
+    menu.classList.remove("show");
+  });
+});
 
-themeBtn?.addEventListener("click", ()=>{
+// ===== THEME TOGGLE =====
+const themeBtn = $("themeBtn");
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "light") {
+  document.body.classList.add("light");
+}
+
+themeBtn.textContent =
+  document.body.classList.contains("light") ? "☀️" : "🌙";
+
+themeBtn?.addEventListener("click", () => {
   document.body.classList.toggle("light");
+
   const isLight = document.body.classList.contains("light");
+
   localStorage.setItem("theme", isLight ? "light" : "dark");
+
   themeBtn.textContent = isLight ? "☀️" : "🌙";
 });
 
-// contact form -> mailto
+// ===== CONTACT FORM (MAILTO) =====
 const form = $("contactForm");
-form?.addEventListener("submit", (e)=>{
+
+form?.addEventListener("submit", (e) => {
   e.preventDefault();
+
   const data = new FormData(form);
+
   const name = data.get("name");
   const email = data.get("email");
-  const msg = data.get("message");
+  const message = data.get("message");
 
   const subject = encodeURIComponent(`Portfolio Inquiry — ${name}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}\n`);
 
-  window.location.href = `mailto:${YOUR.email}?subject=${subject}&body=${body}`;
+  const body = encodeURIComponent(
+`Name: ${name}
+Email: ${email}
+
+Message:
+${message}`
+  );
+
+  window.location.href =
+    `mailto:${YOUR.email}?subject=${subject}&body=${body}`;
 });
